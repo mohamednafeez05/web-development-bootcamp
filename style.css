@@ -1,8 +1,8 @@
 body {
-    background-color: rgb(226, 18, 28);
+    background-color: rgb(244, 33, 43);
 }
 h1 {
-    color: rgb(213, 11, 11);
+    color: rgb(190, 7, 7);
     text-align: center;
 }
 a {
@@ -180,6 +180,19 @@ button:hover {
         flex-wrap: wrap;
         gap: 15px;
     }
+    
+    .product-details {
+    flex-direction: column;
+    text-align: center;
+    }
+
+    .product-details-info {
+        width: 100%;
+    }
+
+    .specifications {
+        text-align: left;
+    }
 
 }
 
@@ -279,4 +292,42 @@ footer {
 
 .product-card p {
     line-height: 1.4;
+}
+
+
+/* product.html page */
+.product-details-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-details {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.product-details-image {
+    flex: 1;
+}
+
+.product-details-info {
+    flex: 1;
+}
+
+.specifications {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.specifications h3 {
+    margin-bottom: 10px;
+}
+
+.specifications ul {
+    padding-left: 20px;
+    line-height: 1.8;
 }
