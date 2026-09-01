@@ -193,6 +193,15 @@ button:hover {
     .specifications {
         text-align: left;
     }
+    
+    .contact-form,
+    .login-card {
+        width: 100%;
+    }
+
+    .login-card {
+        padding: 20px;
+    }
 
 }
 
@@ -330,4 +339,60 @@ footer {
 .specifications ul {
     padding-left: 20px;
     line-height: 1.8;
+}
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.login-page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.login-form input {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.login-form button {
+    margin-top: 8px;
 }

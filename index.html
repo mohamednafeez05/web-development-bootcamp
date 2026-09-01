@@ -20,7 +20,7 @@
     </div>
 
     <div class="header-actions">
-        <a href="#">Account</a>
+        <a href="login.html">Account</a>
         <a href="#">Cart</a>
     </div>
 
@@ -170,11 +170,27 @@
     </div>
 </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@insmart.lk</p>
-        <p>Phone: +94 XX XXX XXXX</p>
-    </section>
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form class="contact-form">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+</section>   
 
 </main>
 
