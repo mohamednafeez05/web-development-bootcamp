@@ -2,9 +2,27 @@ const cartLink = document.querySelector(".cart-link");
 
 const addToCartButtons = document.querySelectorAll(".product-card button");
 
-let cartCount = 0;
+let cart = [];
 
 cartLink.textContent = "Cart (0)";
+
+function updateCartSummary() {
+
+    let totalItems = 0;
+    let cartTotal = 0;
+
+    cart.forEach(function(item) {
+
+        totalItems = totalItems + item.quantity;
+
+        cartTotal = cartTotal + (item.price * item.quantity);
+
+    });
+
+    cartLink.textContent = "Cart (" + totalItems + ")";
+
+    console.log("Cart Total: Rs. " + cartTotal);
+}
 
 addToCartButtons.forEach(function(button) {
 
@@ -24,11 +42,35 @@ addToCartButtons.forEach(function(button) {
             .textContent
             .trim();
 
+        const numericPrice = Number(
+            productPrice.replace("Rs.", "").replaceAll(",", "").trim()
+        );
+
         console.log(productName, productPrice);
 
-        cartCount++;
+        const product = {
+            name: productName,
+            price: numericPrice,
+            quantity: 1
+        };
 
-        cartLink.textContent = "Cart (" + cartCount + ")";
+        const existingProduct = cart.find(function(item) {
+            return item.name === productName;
+        });
+
+        if (existingProduct) {
+
+            existingProduct.quantity++;
+
+        } else {
+
+            cart.push(product);
+
+        }
+
+        console.log(cart);
+        
+        updateCartSummary();
 
         clickedButton.textContent = "Added ✓";
 
