@@ -396,3 +396,46 @@ footer {
 .login-form button {
     margin-top: 8px;
 }
+.cart-page {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.cart-page h2 {
+    margin-bottom: 25px;
+}
+
+#cartItems {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.cart-item h3 {
+    margin-bottom: 10px;
+}
+
+.cart-item p {
+    margin: 6px 0;
+}
+
+.cart-summary {
+    margin-top: 25px;
+    padding: 20px;
+    border-top: 2px solid #ddd;
+    text-align: right;
+}
+
+.empty-cart-message {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+}
